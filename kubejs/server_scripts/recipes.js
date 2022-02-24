@@ -31,6 +31,7 @@ let F = (id, x) => MOD("forge", id, x)
 let AC = (id, x) => MOD("aquaculture", id, x)
 let PP = (id, x) => MOD("prettypipes", id, x)
 let OC = (id, x) => MOD("occultism", id, x)
+let QU = (id, x) => MOD("quark", id, x)
 //
 
 let colours = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
@@ -445,7 +446,7 @@ function unwantedRecipes(event) {
     event.remove({ id: 'ravencoffee:sandwich_beef' })
     event.remove({ id: 'ravencoffee:sandwich_chicken' })
 
-    event.remove({ id: 'quark:potato_crate' })
+    event.remove({ id: QU('building/crafting/compressed/potato_crate') })
 
     native_metals.forEach(e => {
         event.remove({ type: MC("smelting"), input: F("#dusts/" + e) })
